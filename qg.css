@@ -1,0 +1,838 @@
+/* Global styles */
+html, body {
+    height: 100%; /* Use full height of the viewport */
+    width: 100%; /* Use full width of the viewport */
+    overflow: auto; /* Allow scrolling */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    flex-direction: column; /* Stack content vertically */
+    background-color: black;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* Ensure background is fixed and takes up the full screen */
+.background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Shooting meteors */
+.meteor {
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+    animation: meteor 5s linear infinite;
+}
+
+.meteor:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 5px;
+    border-radius: 50%;
+    margin-top: -2px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Individual meteors with random starting positions and timings */
+.meteor-1 { top: 100px; left: 10%; animation-duration: 2s; }
+.meteor-2 { top: 200px; left: 20%; animation-duration: 4s; }
+.meteor-3 { top: 300px; left: 30%; animation-duration: 7s; }
+.meteor-4 { top: 400px; left: 40%; animation-duration: 2.5s; }
+.meteor-5 { top: 500px; left: 50%; animation-duration: 5.5s; }
+.meteor-6 { top: 600px; left: 60%; animation-duration: 3s; }
+.meteor-7 { top: 700px; left: 70%; animation-duration: 8s; }
+.meteor-8 { top: 800px; left: 80%; animation-duration: 4.8s; }
+.meteor-9 { top: 900px; left: 90%; animation-duration: 6s; }
+.meteor-10 { top: 1000px; left: 15%; animation-duration: 5.8s; }
+
+/* Animation keyframes */
+@keyframes meteor {
+    0% {
+        opacity: 0;
+        margin-top: -200px;
+        margin-left: 0px;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        margin-top: 300px;
+        margin-left: -600px;
+    }
+}
+
+
+/* Planet image styling - NOT FIXED */
+.planet1 {
+    width: 100%;
+    height: auto; /* Adjust height automatically based on width */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.planet2 {
+    width: 100%;
+    height: 100%; /* Adjust height automatically based on width */
+    transform: scaleX(-1); /* Flips the image horizontally */
+    margin-top: 0px;
+}
+
+.planet3 {
+    width: 100%;
+    height: auto; /* Adjust height automatically based on width */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.planet4 {
+    width: 100%;
+    height: auto; /* Adjust height automatically based on width */
+    object-fit: cover;
+    transform: scaleX(-1); /* Flips the image horizontally */
+    display: block;
+    margin-bottom: 0px;
+}
+
+.planet5 {
+    width: 100%;
+    height: auto; /* Adjust height automatically based on width */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0px;
+}
+
+
+.page1quote {
+    position: absolute;
+    font-size: 25px;
+    margin-top: 60px;
+    margin-left: 710px;
+}
+
+.header {
+    display: flex;
+    position: absolute;
+    margin-left: 2470px;
+    margin-top: -30px;
+    justify-content: space-between;
+}
+
+.first {
+    position: relative;
+    z-index: 100; /* High enough to stay on top of everything */
+    color: white; /* Ensures visibility on a dark background */
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif; 
+}
+
+a:visited {
+    color: white; /* Ensures the link goes back to white after clicking */
+}
+
+.header a:hover {
+    margin-right: 10px; /* Adds a 10px gap between the IDs */
+    color: white; /* Ensures links stay white even after being clicked */
+    text-decoration: none; /* Optional: Removes the default underline */
+    margin-top: 10px;
+}
+
+.header a:last-child {
+    margin-right: 0; /* Removes margin on the last item to avoid extra spacing */
+}
+
+.section1 {
+    margin-left: 1630px;
+    position: absolute;
+    z-index: 100; /* High enough to stay on top of everything */
+    color: white; /* Ensures visibility on a dark background */
+    font-size: 25px;
+    margin-top: 400px;
+    font-family: 'Arial', sans-serif;
+}
+
+#section2 {
+    margin-left: 1630px;
+    position: absolute;
+    z-index: 100; /* High enough to stay on top of everything */
+    color: white; /* Ensures visibility on a dark background */
+    font-size: 25px;
+    margin-top: 300px;
+    font-family: 'Arial', sans-serif;
+}
+
+#section3 {
+    margin-left: 1230px;
+    position: absolute;
+    z-index: 100; /* High enough to stay on top of everything */
+    color: white; /* Ensures visibility on a dark background */
+    font-size: 25px;
+    margin-top: 100px;
+    font-family: 'Arial', sans-serif;
+}
+
+#section4 {
+    margin-left: 1230px;
+    position: absolute;
+    z-index: 100; /* High enough to stay on top of everything */
+    color: white; /* Ensures visibility on a dark background */
+    font-size: 25px;
+    margin-top: 100px;
+    font-family: 'Arial', sans-serif;
+}
+
+.section5 {
+    margin-left: 1230px;
+    position: absolute;
+    z-index: 100; /* High enough to stay on top of everything */
+    color: white; /* Ensures visibility on a dark background */
+    font-size: 25px;
+    margin-top: 100px;
+    font-family: 'Arial', sans-serif;
+}
+
+.button1 {
+    display: flex;
+    align-items: center;
+    color: white; /* Or any color you want */
+    background-color: transparent; /* Optional if you want to see the background */
+    border: 1px solid white; /* Optional, adds a border */
+    padding: 10px 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.section1 svg {
+    margin-left: 5px;
+    margin-top: 4px;
+    margin-right: 4px;
+    color: white;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: -15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+button:hover {
+    background-color: #457ba0; /* Darker green */
+    color: #fdfdf9; /* Yellow text on hover */
+}
+
+.buttons {
+    display: flex; /* Puts the buttons in a row */
+    position: absolute;
+    gap: 20px; /* Optional: adds space between the buttons */
+    align-items: center; /* Aligns content like icons and text vertically */
+    margin-left: 1630px;
+    margin-top: 580px;
+    z-index: 10;
+}
+
+.button1 {
+    display: flex; /* Ensures the icon and text stay on the same line */
+    align-items: center; /* Vertically centers the icon and text */
+    gap: 5px; /* Optional: space between the icon and text */
+}
+
+.section1h2 {
+    color: #457ba0;
+    margin-top: -28px;
+    margin-bottom: 5px;
+}
+
+.abrv2h3 {
+    margin-left: 60px;
+    color: gray;
+}
+
+.abrv2h1 {
+    margin-left: 15px;
+    margin-bottom: 100px;
+}
+
+.abrv3h3 {
+    position: absolute;
+    margin-top: -35px;
+    color: gray;
+}
+
+.abrv3h1 {
+    margin-bottom: 100px;
+}
+
+.abrv4h3 {
+    margin-left: 60px;
+    color: gray;
+}
+
+.abrv4h1 {
+    margin-bottom: 100px;
+}
+
+.abrv5h3 {
+    margin-left: 92px;
+    color: gray;
+}
+
+.abrv5h1 {
+    margin-left: -10px;
+    margin-bottom: 100px;
+}
+
+.sec2box1 {
+    height: 400px;
+    width: 700px;
+    background-color: white;
+    border-radius: 2%;
+    margin-left: -600px;
+    background: transparent;
+    border: solid white 1px;
+}
+
+.sec2box2 {
+    height: 400px;
+    width: 700px;
+    background-color: white;
+    border-radius: 2%;
+    margin-left: 200px;
+    margin-top: -400px;
+    background: transparent;
+    border: solid white 1px;
+}
+
+#section2 p {
+    margin-top: 50px;
+    font-size: 30px;
+    margin-left: -750px;
+}
+
+#sec2svg1 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-left: -300px;
+    margin-top: -390px;
+}
+
+#sec2svg2 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-left: 500px;
+    margin-top: -390px;
+}
+
+.sec2firsth2 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-left: -350px;
+    margin-top: -280px;
+    margin-bottom: 0px;
+}
+
+.sec2secondh2 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-left: 455px;
+    margin-top: -275px;
+    font-weight: bold;
+}
+
+.sec2h31 {
+    position: absolute;
+    height: 100px;
+    width: 600px;
+    margin-left: -310px;
+    margin-top: -200px;
+    font-size: 30px;
+    margin-top: -225px;
+}
+
+.sec2h312 {
+    position: absolute;
+    height: 100px;
+    width: 600px;
+    margin-left: -465px;
+    margin-top: -200px;
+    font-size: 40px;
+    margin-top: -170px;
+}
+
+.sec2h32 {
+    position: absolute;
+    height: 200px;
+    width: 600px;
+    margin-left: 315px;
+    margin-top: -170px;
+    font-size: 40px;
+}
+
+#section3 h3 {
+    height: 900;
+    width: 1200px;
+    margin-left: 69px;
+}
+
+.sec3box1 {
+    height: 800px;
+    width: 900px;
+    background-color: white;
+    border-radius: 2%;
+    margin-left: -780px;
+    background: transparent;
+    border: solid white 1px;
+}
+
+.sec3box2 {
+    height: 800px;
+    width: 900px;
+    background-color: white;
+    border-radius: 2%;
+    margin-left: 200px;
+    margin-top: -800px;
+    background: transparent;
+    border: solid white 1px;
+}
+
+.sec4box1 {
+    height: 800px;
+    width: 600px;
+    background-color: white;
+    border-radius: 2%;
+    margin-left: -980px;
+    background: transparent;
+    border: solid white 1px;
+}
+
+.sec4box2 {
+    height: 800px;
+    width: 600px;
+    background-color: white;
+    border-radius: 2%;
+    margin-left: -190px;
+    margin-top: -800px;
+    background: transparent;
+    border: solid white 1px;
+}
+
+.sec4box3 {
+    height: 800px;
+    width: 600px;
+    background-color: white;
+    border-radius: 2%;
+    margin-left: 580px;
+    background: transparent;
+    border: solid white 1px;
+    margin-top: -800px;
+}
+
+.sec5box1 {
+    position: absolute;
+    height: 170px;
+    width: 800px;
+    margin-left: 980px;
+    background-color: white;
+    border-radius: 2%;
+    background: transparent;
+    border: solid white 1px;
+    margin-top: 400px;
+}
+
+#footericon {
+    height: 60px;
+    width: 40px;
+    margin: 5px;
+}
+
+.buttondiv {
+    position: absolute;
+    margin-left: 1176px;
+    margin-top: 450px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4%;
+    cursor: pointer;
+    color: white;
+    
+}
+
+.buttondiv:hover {
+    color: #0051ff; /* Gold, but you can pick any color */
+}
+
+.section5 .abrv {
+    margin-left: 98px;
+}
+
+.sec3box1 h1 {
+    text-decoration: underline;
+    padding-top: 30px;
+    padding-left: 70px;
+    font-size: 55px;
+}
+
+.sec3box2 h1 {
+    text-decoration: underline;
+    padding-top: 30px;
+    padding-left: 70px;
+    font-size: 55px;
+}
+
+.frontskills1 {
+    padding-left: 60px;
+    margin-top: 55px;
+}
+
+.backskills1 {
+    padding-left: 50px;
+}
+
+.frontskills2 {
+    margin-left: 490px;
+    margin-top: -375px;
+}
+
+.backskills2 {
+    margin-left: 500px;
+    margin-top: -375px;
+    margin-bottom: 200px;
+}
+
+.sec3h2one {
+    position: absolute;
+    margin-bottom: 60px;
+}
+
+.sec3h2two {
+    position: absolute;
+    margin-top: 150px;
+    margin-bottom: 60px;
+}
+
+.sec3h2three {
+    position: absolute;
+    margin-top: 270px;
+    margin-bottom: 40px;
+}
+
+.sec3h2four {
+    position: absolute;
+    margin-top: 390px;
+    margin-bottom: 40px;
+}
+
+.sec3h2five {
+    position: absolute;
+    margin-top: 510px;
+    margin-bottom: 20px;
+}
+
+.sec3h2six {
+    position: absolute;
+    margin-top: 400px;
+    margin-bottom: 40px;
+    margin-left: -15px;
+}
+
+.sec3h2seven {
+    position: absolute;
+    margin-top: 525px;
+    margin-bottom: 40px;
+    margin-left: -15px;
+}
+
+
+.sec3h2eight {
+    position: absolute;
+    margin-top: 640px;
+    margin-bottom: 40px;
+    margin-left: -15px;
+}
+
+.sec3h2nine {
+    position: absolute;
+    margin-top: 763px;
+    margin-bottom: 40px;
+    margin-left: -15px;
+}
+
+.sec3h2ten {
+    position: absolute;
+    margin-top: 890px;
+    margin-bottom: 40px;
+    margin-left: -15px;
+}
+
+#skillbox1 {
+    height: 30px;
+    width: 30px;
+    padding-right: 15px;
+}
+
+#skillbox2 {
+    height: 30px;
+    width: 30px;
+    padding-right: 15px;
+}
+
+.sec3h2box2one {
+    position: absolute;
+    margin-top: 75px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2two {
+    position: absolute;
+    margin-top: 208px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2three {
+    position: absolute;
+    margin-top: 317px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2four {
+    position: absolute;
+    margin-top: 440px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2five {
+    position: absolute;
+    margin-top: 567px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2six {
+    position: absolute;
+    margin-top: 450px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2seven {
+    position: absolute;
+    margin-top: 581px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2eight {
+    position: absolute;
+    margin-top: 690px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2nine {
+    position: absolute;
+    margin-top: 816px;
+    margin-bottom: 60px;
+}
+
+.sec3h2box2ten {
+    position: absolute;
+    margin-top: 943px;
+    margin-bottom: 60px;
+}
+
+.sec4img1 {
+    height: 450px;
+    width: 550px;
+    border-radius: 2%;
+    margin-left: 25px;
+    margin-top: 30px;
+    border: solid white 1px;
+}
+
+
+.sec4img2 {
+    height: 540px;
+    width: 390px;
+    border-radius: 2%;
+    margin-left: 107px;
+    margin-top: 30px;
+    border: solid white 1px;
+}
+
+
+.sec4img3 {
+    height: 440px;
+    width: 390px;
+    border-radius: 2%;
+    margin-left: 105px;
+    margin-top: 30px;
+    border: solid white 1px;
+}
+
+.demobutton1 {
+    height: 100px;
+    width: 450px;
+    margin-left: 76px;
+    margin-top: 115px;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    border: solid white 1px;
+    border-radius: 20px;
+}
+
+.demobutton2 {
+    height: 100px;
+    width: 450px;
+    margin-left: 76px;
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    border: solid white 1px;
+    border-radius: 20px;
+}
+
+.demobutton3 {
+    height: 100px;
+    width: 450px;
+    margin-left: 76px;
+    margin-top: 115px;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    border: solid white 1px;
+    border-radius: 20px;
+}
+
+#section4 .abvr {
+    font-size: 400px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .page1quote, .section1, #section2, #section3, #section4, .section5, .buttons {
+        position: static; /* Removes absolute positioning */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .header {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .first, .section1, #section2, #section3, #section4, .section5 {
+        font-size: 18px;
+    }
+
+    .sec2box1, .sec2box2, .sec3box1, .sec3box2, .sec4box1, .sec4box2, .sec4box3, .sec5box1 {
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttondiv {
+        margin: 20px auto;
+        font-size: 20px;
+    }
+
+    .frontskills1, .backskills1, .frontskills2, .backskills2 {
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .sec2h31, .sec2h312, .sec2h32 {
+        width: 100%;
+        margin: 10px auto;
+        font-size: 20px;
+    }
+
+    #footericon {
+        height: 40px;
+        width: 30px;
+    }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .page1quote, .section1, #section2, #section3, #section4, .section5, .buttons {
+        position: static; /* Removes absolute positioning */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .header {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .first, .section1, #section2, #section3, #section4, .section5 {
+        font-size: 18px;
+    }
+
+    .sec2box1, .sec2box2, .sec3box1, .sec3box2, .sec4box1, .sec4box2, .sec4box3, .sec5box1 {
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttondiv {
+        margin: 20px auto;
+        font-size: 20px;
+    }
+
+    .frontskills1, .backskills1, .frontskills2, .backskills2 {
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .sec2h31, .sec2h312, .sec2h32 {
+        width: 100%;
+        margin: 10px auto;
+        font-size: 20px;
+    }
+
+    #footericon {
+        height: 40px;
+        width: 30px;
+    }
+}
